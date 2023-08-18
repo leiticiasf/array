@@ -1,0 +1,20 @@
+button{
+    background-color: #751811; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+body{
+    background-image: url(doom.jpg);
+    background-size: 100%;
+}
+
+h1{
+    color: #d88200d3;
+    font-family: sans-serif;
+}
