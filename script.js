@@ -4,27 +4,36 @@ let listaProf = []
 function ver(){
     console.log(listaNome)
     console.log(listaProf)
+}
 
 function adc(){
     let nome = document.getElementById("nome").value;
     let prof = document.getElementById("profissao").value;
+    nomeNovo = nome.toUpperCase();
+    profNova = prof.toUpperCase();
+    if(listaNome.includes(nomeNovo) == true ){
+         alert("Erro! Este nome já existe na lista!")
+    }
+    else{
     listaNome.push(nome); //chama as funções que tem nas arrays. 
     listaProf.push(prof); 
     console.log(listaNome);
-    console.log(listaProf);
+    console.log(listaProf); 
     Swal.fire({
         icon: 'success',
         title: 'Sucesso!',
         color: '#de6a04',
         background: '#360101',
-        text: nome + prof + 'foram adicionados a lista com êxito!',
+        text: nome + " e " + prof + ' foram adicionados a lista com êxito!',
 })
-}
+}}
 
 function rmv(){
     let nome = document.getElementById("nome").value;
     let profissao = document.getElementById("profissao").value;
     let pos = listaNome.indexOf(nome); //retorna o número referente a posição do produto requerido. 
+
+
     if(pos !== -1){  
     listaNome.splice(pos, 1); //vai remover a quantidade de posições do array. 
     listaProf.splice(pos, 1)
@@ -46,3 +55,6 @@ function rmv(){
         //para caso o produto pesquisado não exista, o valor retornado será de -1.
       })    
 }}
+
+// nomeDaString.toUpperCase() converte em maiúsculo
+// nomeDaString.toLowerCase() converte em minusculo
