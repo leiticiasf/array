@@ -15,6 +15,7 @@ function adc(){
     Swal.fire({
         icon: 'success',
         title: 'Sucesso!',
+        color: '#de6a04',
         background: '#360101',
         text: nome + prof + 'foram adicionados a lista com êxito!',
 })
@@ -29,6 +30,8 @@ function rmv(){
             icon: 'error',
             title: 'Oops...',
             text: 'Algo deu errado! ' + ' A pessoa ' + nome + ' e a profissão ' + profissao + ' não foram encontrados!',
+            color: '#de6a04',
+            background: '#360101'
             //para caso o produto pesquisado não exista, o valor retornado será de -1.
           })
           
@@ -36,10 +39,13 @@ function rmv(){
     }
     else{
         listaNome.splice(pos, 1); //vai remover a quantidade de posições do array. 
+        listaProf.splice(pos, 1)
         console.log("O nome " + nome + " e a profissão " + profissao + " foram removidos.");
         Swal.fire({
             icon: 'success',
             title: 'Sucesso!',
-            text: 'O nome e a profissão foram removidas com êxito!'
+            text: 'O nome e a profissão foram removidas com êxito!',
+            color: '#de6a04',
+            background: '#360101'
     })
 }}
